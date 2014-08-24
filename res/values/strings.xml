@@ -4,5 +4,6 @@
     <string name="app_name">DidaClock</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="user_guide">Please enter editmode and select "Add widget to Launcher", then choose DidaClock, Best Wishes!</string>
 
 </resources>
