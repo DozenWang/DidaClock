@@ -3,5 +3,8 @@
     <!-- Default screen margins, per the Android Design guidelines. -->
     <dimen name="activity_horizontal_margin">16dp</dimen>
     <dimen name="activity_vertical_margin">16dp</dimen>
-
+    
+        <dimen name="crop_photo_inside_top">66dip</dimen>
+    <dimen name="crop_photo_inside_bottom">96dip</dimen>
+    
 </resources>

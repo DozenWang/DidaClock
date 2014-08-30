@@ -53,6 +53,15 @@
                 android:resource="@xml/deskclock_widget" />
         </receiver> 
         
+        <activity
+            android:name="com.example.cropimage.CropPhotoActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@style/Transparent.NoTitle"
+            >
+        </activity>
+        
+        
         <!--                    umeng                         -->
         <activity android:name="com.umeng.fb.ConversationActivity"
          android:theme="@android:style/Theme.NoTitleBar"/>

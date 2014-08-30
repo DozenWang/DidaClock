@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <view
+        class="com.example.cropimage.PhotoFrameView"
+        xmlns:dida ="http://schemas.android.com/apk/res/com.example.widgetclock"
+        android:id="@+id/photo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/black"
+        dida:boundType="inside"
+        dida:insideTop="@dimen/crop_photo_inside_top" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <LinearLayout
+            android:id="@+id/top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="8dip"
+            android:paddingRight="8dip"
+            android:background="@drawable/topbar_bg" >
+
+            <Button
+                android:id="@+id/cancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/topbar_button"
+                android:text="@android:string/cancel" />
+
+            <TextView
+                android:id="@+id/title"
+                android:layout_width="0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="@string/move_and_resize"/>
+
+            <Button
+                android:id="@+id/turn_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/topbar_button"
+                android:text="@string/btn_rotation" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/toolbar_bg"
+            android:gravity="center_vertical|center" >
+
+            <Button
+                android:id="@+id/ok"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/toolbar_button"
+                android:text="@android:string/ok"
+                 />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <com.example.cropimage.ContactPhotoThumbnailView
+        android:id="@+id/animate_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/crop_photo_inside_top"
+        android:background="@drawable/contact_photo_thumbnail_area" />
+</FrameLayout>

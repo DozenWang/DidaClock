@@ -5,4 +5,10 @@
     <string name="action_settings">Settings</string>
     <string name="user_guide">Please enter editmode and select "Add widget to Launcher", then choose DidaClock, Now only support Android 4.2 or Higher, Best Wishes!</string>
 	<string name="feedback">Feedback</string>
+	
+	 <string name="move_and_resize">Move and resize</string>
+	 <string name="btn_rotation">Rotate</string>
+	 <string name="set_photo_failed_msg">Failed to assign picture.</string>
+	 <string name="save_photo_progress">Saving photo\u2026</string>
+	 
 </resources>
