@@ -7,6 +7,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import android.R.integer;
 import android.content.Context;
 import android.database.Cursor;
 import android.graphics.Bitmap;
@@ -21,11 +22,14 @@ import android.util.Log;
  */
 public class ContactPhotoUtils {
     private static final String TAG = "ContactPhotoUtils";
+    
+    public static int PHOTO_WIDTH;
+    public static int PHOTO_HEIGHT;
 
     private static final String PHOTO_DATE_FORMAT = "'IMG'_yyyyMMdd_HHmmss";
     private static final String NEW_PHOTO_DIR_PATH =
             Environment.getExternalStorageDirectory() + "/DCIM/Camera";
-
+    
 
     /**
      * Generate a new, unique file to be used as an out-of-band communication
@@ -101,6 +105,17 @@ public class ContactPhotoUtils {
         }
         return fileName;
     }
+    
+	public static Bitmap getWidgetPhotoBitmap(Context context, String path) {
+		InputStreamLoader streamLoader = new InputStreamLoader(path);
+		Bitmap ret = null;
+		try {
+			ret = ImageUtils.getBitmap(streamLoader, PHOTO_WIDTH * PHOTO_HEIGHT);
+		} finally {
+			streamLoader.close();
+		}
+		return ret;
+	}
 }
 
 

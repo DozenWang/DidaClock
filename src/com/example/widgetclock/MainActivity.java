@@ -12,6 +12,7 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.ImageView;
 
+import com.example.cropimage.ContactPhotoUtils;
 import com.example.cropimage.CropPhotoActivity;
 import com.example.cropimage.ImageUtils;
 import com.example.cropimage.InputStreamLoader;
@@ -32,8 +33,8 @@ public class MainActivity extends Activity {
 	private static final int REQUEST_CODE_PICK_IMAGE = 10001;
 	private static final int REQUEST_CODE_CROP_RESULT = 10002;
 	
-	private static final String PHOTO_RET1 = "Photo1";
-	private static final String PHOTO_RET2 = "Photo2";
+	private static final String PHOTO_RET1 = "Photo1.jpg";
+	private static final String PHOTO_RET2 = "Photo2.jpg";
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -61,6 +62,9 @@ public class MainActivity extends Activity {
 		
 		mPhotoWidth = mImageView1.getWidth();
 		mPhotoHeight = mImageView2.getHeight();
+		
+		ContactPhotoUtils.PHOTO_WIDTH = mPhotoWidth;
+		ContactPhotoUtils.PHOTO_HEIGHT = mPhotoHeight;
 
 		
 		mImageView1.setOnClickListener(mItemClickListener);
@@ -110,17 +114,19 @@ public class MainActivity extends Activity {
 				startActivityForResult(intent, REQUEST_CODE_CROP_RESULT);
 				break;
 			case REQUEST_CODE_CROP_RESULT:
-				String resultFilePath = data
-						.getStringExtra(CropPhotoActivity.FILE_NAME);
-				InputStreamLoader streamLoader = new InputStreamLoader(
-						resultFilePath);
-				Bitmap ret = ImageUtils.getBitmap(streamLoader, mPhotoWidth
-						* mPhotoHeight);
-				mImageView1.setImageBitmap(ret);
-				mImageView2.setImageBitmap(ret);
-				Log.i("Dozen",
-						"onActivityResult filePath : "
-								+ data.getStringExtra(CropPhotoActivity.FILE_NAME));
+				String resultFilePath = data.getStringExtra(CropPhotoActivity.FILE_NAME);
+				Bitmap ret = ContactPhotoUtils.getWidgetPhotoBitmap(this, resultFilePath);
+				if(mFileName.equals(PHOTO_RET1)) {
+					WidgetPreferenceManager.putString(this, WidgetPreferenceManager.PHOTO_WIDGET_PATH1, resultFilePath);
+					mImageView1.setImageBitmap(ret);
+				} else if(mFileName.equals(PHOTO_RET2)) {
+					WidgetPreferenceManager.putString(this, WidgetPreferenceManager.PHOTO_WIDGET_PATH2, resultFilePath);
+					mImageView2.setImageBitmap(ret);
+				}
+				Log.i("Dozen", "onActivityResult filePath : " + resultFilePath);
+				Intent photoIntent = new Intent(PhotoChangedReceiver.PHOTO_CHANGED_ACTION);
+			    photoIntent.putExtra(PhotoChangedReceiver.PHOTO_PATH, resultFilePath);
+				sendBroadcast(photoIntent);
 
 				break;
 
