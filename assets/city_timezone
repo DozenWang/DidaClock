@@ -1,0 +1,38 @@
+0	Asia/Shanghai	Beijing, China	中国, 北京	中國, 北京	beijing
+1	Europe/London	London, England	英国, 伦敦	英國, 倫敦	lundun
+2	America/Detroit	Washington DC, U.S.A	美国, 华盛顿特区	美國, 華盛頓特區	huashengduntequ
+3	America/Los_Angeles	Seattle, U.S.A.	美国, 西雅图	美國, 西雅圖	xiyatu
+4	Europe/Paris	Paris, France	法国, 巴黎	法國, 巴黎	bali
+5	Europe/Berlin	Berlin, Germany	德国, 柏林	德國, 柏林	bolin
+6	Europe/Rome	Rome, Italy	意大利, 罗马	意大利, 羅馬	luoma
+7	Europe/Moscow	Moscow, Russia	俄罗斯, 莫斯科	俄羅斯, 莫斯科	mosike
+8	Asia/Tokyo	Tokyo, Japan	日本, 东京	日本, 東京	dongjing
+9	America/Mexico_City	Mexico City, Mexico	墨西哥, 墨西哥城	墨西哥, 墨西哥城	moxigecheng
+10	America/Sao_Paulo	São Paulo, Brazil	巴西, 圣保罗	巴西, 聖保羅	shengbaoluo
+11	America/Buenos_Aires	Buenos Aires, Argentina	阿根廷, 布宜诺斯艾利斯	阿根廷, 布宜諾斯艾利斯	buyinuosiailisi
+12	Europe/Amsterdam	Amsterdam, Netherlands	荷兰, 阿姆斯特丹	荷蘭, 阿姆斯特丹	amusitedan
+13	Europe/Brussels	Brussels, Belgium	比利时, 布鲁塞尔	比利時, 布魯塞爾	bulusaier
+14	Europe/Athens	Athens, Greece	希腊, 雅典	希臘, 雅典	yadian
+15	Africa/Cairo	Cairo, Egypt	埃及, 开罗	埃及, 開羅	kailuo
+16	Asia/Jerusalem	Jerusalem, Israel	以色列, 耶路撒冷	以色列, 耶路撒冷	yelusaleng
+17	Asia/Dubai	Dubai, U.A.E.	阿联酋, 迪拜	阿聯酋, 迪拜	dibai
+18	Asia/Rangoon	Yangon, Myanmar	缅甸, 仰光	緬甸, 仰光	yangguang
+19	Asia/Bangkok	Bangkok, Thailand	泰国, 曼谷	泰國, 曼谷	mangu
+20	Asia/Hong_Kong	Hong Kong, China	中国, 香港	中國, 香港	xianggang
+21	Asia/Kuala_Lumpur	Kuala Lumpur, Malaysia	马来西亚, 吉隆坡	馬來西亞, 吉隆坡	jilongpo
+22	Asia/Seoul	Seoul, South Korea	南韩, 首尔	南韓, 首爾	shouer
+23	Africa/Algiers	Algiers, Algeria	阿尔及利亚, 阿尔及尔	阿爾及利亞, 阿爾及爾	aerjier
+24	Europe/Madrid	Barcelona, Spain	西班牙, 巴塞罗纳	西班牙, 巴塞羅納	basailuona
+25	Europe/Bucharest	Bucharest, Romania	罗马尼亚, 布加勒斯特	羅馬尼亞, 布加勒斯特	bujialesite
+26	Africa/Johannesburg	Cape Town, South Africa	南非, 开普敦	南非, 開普敦	kaipudun
+27	Asia/Riyadh	Doha, Qatar	卡塔尔, 多哈	卡塔爾, 多哈	duoha
+28	Asia/Karachi	Islamabad, Pakistan	巴基斯坦, 伊斯兰堡	巴基斯坦, 伊斯蘭堡	yisilanbao
+29	Asia/Istanbul	Istanbul, Turkey	土耳其, 伊斯坦布尔	土耳其, 伊斯坦布爾	yisitanbuer
+30	Europe/Amsterdam	Kyiv, Ukraine	乌克兰, 基辅	烏克蘭, 基輔	jifu
+31	Europe/Lisbon	Lisbon, Portugal	葡萄牙, 里斯本	葡萄牙, 裏斯本	lisiben
+32	Europe/Madrid	Madrid, Spain	西班牙, 马德里	西班牙, 馬德裏	madeli
+33	Australia/Melbourne	Melbourne, Australia	澳大利亚, 墨尔本	澳大利亞, 墨爾本	moerben
+34	Asia/Singapore	Singapore, Singapore	新加坡, 新加坡	新加坡, 新加坡	xinjiapo
+35	Europe/Stockholm	Stockholm, Sweden	瑞典, 斯德哥尔摩	瑞典, 斯德哥爾摩	sidegeermo
+36	America/Vancouver	Vancouver, Canada	加拿大, 温哥华	加拿大, 溫哥華	wengehua
+37	Europe/Vienna	Vienna, Austria	奥地利, 维也纳	奧地利, 維也納	weiyena

@@ -64,14 +64,28 @@
             android:theme="@style/Transparent.NoTitle"
             >
         </activity>
+               
+        <activity
+            android:name="com.example.timezone.TimezoneListActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Light"
+            >
+        </activity>
         
          <receiver
-            android:name="com.example.widgetclock.PhotoChangedReceiver"
+            android:name="com.example.widgetclock.WidgetChangedReceiver"
              >
             <intent-filter>
                 <action android:name="com.dozen.PHOTO_CHANGED_ACTION" />
             </intent-filter>
+            
+            <intent-filter>
+                <action android:name="com.dozen.TIMEZONE_CHANGED_ACTION" />
+            </intent-filter>
         </receiver> 
+        
+         
         
         
         <!--                    umeng                         -->

@@ -97,11 +97,6 @@ public class CropPhotoActivity extends Activity implements OnClickListener {
         if (!TextUtils.equals(uri.getScheme(), ContentResolver.SCHEME_FILE)) {
             ContentResolver cr = this.getContentResolver();
             // get the physical path of the image
-            // @MiuiLiteHook.ADD_START
-            // MIUIAPP-7080
-            // 4.4之前获取的uri是带文件路径的，而4.4返回的却是content://com.android.providers.media.documents/document/image:3951这样的,
-            // 没有路径,只有图片编号的uri.这就导致接下来无法根据图片路径来裁剪的步骤了。以下需要用到4.4中的一些方法来解析uri
-            // wiki地址：http://wiki.n.miui.com/pages/viewpage.action?pageId=5178160
             uri = MiuiMediaUriCompat.getImageContentUri(uri);
             // @MiuiLiteHook.ADD_END
             Cursor c = cr.query(uri, null, null, null, null);
@@ -256,7 +251,7 @@ public class CropPhotoActivity extends Activity implements OnClickListener {
                         }
                         f.createNewFile();
                         FileOutputStream fOut = new FileOutputStream(f);
-                        bitmap.compress(Bitmap.CompressFormat.JPEG, 90, fOut);
+                        squareBitmap.compress(Bitmap.CompressFormat.JPEG, 90, fOut);
 
                         fOut.flush();
                         fOut.close();
