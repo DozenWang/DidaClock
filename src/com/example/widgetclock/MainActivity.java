@@ -8,7 +8,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.util.Log;
-import android.view.TextureView;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -18,13 +17,12 @@ import android.widget.TextView;
 
 import com.example.cropimage.ContactPhotoUtils;
 import com.example.cropimage.CropPhotoActivity;
-import com.example.cropimage.ImageUtils;
-import com.example.cropimage.InputStreamLoader;
 import com.example.timezone.CityZoneHelper;
 import com.example.timezone.CityZoneHelper.CityTimezoneItem;
 import com.example.timezone.TimezoneListActivity;
 import com.umeng.analytics.MobclickAgent;
 import com.umeng.fb.FeedbackAgent;
+import com.umeng.update.UmengUpdateAgent;
 
 public class MainActivity extends Activity {
 
@@ -58,6 +56,9 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		setupUI();
+		
+		UmengUpdateAgent.setUpdateOnlyWifi(false);
+		UmengUpdateAgent.update(this);
 	}
 	
 	@Override

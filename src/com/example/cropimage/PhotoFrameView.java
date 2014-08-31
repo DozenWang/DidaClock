@@ -943,9 +943,10 @@ public class PhotoFrameView extends View {
     }
 
     public boolean photoCropedFromLarge() {
-        float scale = getScale();
-        final float l = Math.min(mBitmapDisplayed.getWidth(), mBitmapDisplayed.getHeight());
-        return l > CONTACT_LARGE_PHOTO_MIN_LENTH && l * scale > CONTACT_LARGE_PHOTO_MIN_LENTH;
+//        float scale = getScale();
+//        final float l = Math.min(mBitmapDisplayed.getWidth(), mBitmapDisplayed.getHeight());
+//        return l > CONTACT_LARGE_PHOTO_MIN_LENTH && l * scale > CONTACT_LARGE_PHOTO_MIN_LENTH;
+    	return true;
     }
 
     public Bitmap generatePhoto() throws IOException {
