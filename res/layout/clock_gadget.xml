@@ -18,7 +18,7 @@
             style="@style/TimeTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:timeZone="Etc/GMT-1" />
+            android:timeZone="Etc/GMT-0" />
 
         <RelativeLayout
             android:layout_width="wrap_content"

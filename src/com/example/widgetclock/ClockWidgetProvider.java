@@ -1,6 +1,8 @@
 package com.example.widgetclock;
 
 import com.example.cropimage.ContactPhotoUtils;
+import com.example.timezone.CityZoneHelper;
+import com.example.timezone.CityZoneHelper.CityTimezoneItem;
 import com.example.widgetclock.R;
 
 import android.app.PendingIntent;
@@ -41,6 +43,21 @@ public class ClockWidgetProvider extends AppWidgetProvider{
     	} else {
     		views.setImageViewResource(R.id.imageView2, R.drawable.default_photo);
     	}
+    	
+		int timeZoneId1 = WidgetPreferenceManager.getInt(context, WidgetPreferenceManager.TIMEZONE_ID1, -1);
+		int timeZoneId2 = WidgetPreferenceManager.getInt(context, WidgetPreferenceManager.TIMEZONE_ID2, -1);
+
+		if(timeZoneId1 >= 0) {
+			CityTimezoneItem item =  CityZoneHelper.getInstance(context).getCityTimezoneItemById(timeZoneId1);
+			views.setString(R.id.time1, "setTimeZone", item.mTimezone);
+			views.setTextViewText(R.id.timeZone1, item.getCityNameByLocale(true));
+		}
+		
+		if(timeZoneId2 >= 0) {
+			CityTimezoneItem item =  CityZoneHelper.getInstance(context).getCityTimezoneItemById(timeZoneId2);
+			views.setString(R.id.time2, "setTimeZone", item.mTimezone);
+			views.setTextViewText(R.id.timeZone2, item.getCityNameByLocale(true));
+		}
 
 		Intent mainIntent = createMainIntent(context);
 		if(mainIntent != null) {

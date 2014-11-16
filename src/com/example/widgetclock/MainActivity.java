@@ -108,6 +108,22 @@ public class MainActivity extends Activity {
 		} else {
 			mImageView2.setImageResource(R.drawable.default_photo);
 		}
+		
+		int timeZoneId1 = WidgetPreferenceManager.getInt(this, WidgetPreferenceManager.TIMEZONE_ID1, -1);
+		int timeZoneId2 = WidgetPreferenceManager.getInt(this, WidgetPreferenceManager.TIMEZONE_ID2, -1);
+
+		if(timeZoneId1 >= 0) {
+			CityTimezoneItem item =  CityZoneHelper.getInstance(this).getCityTimezoneItemById(timeZoneId1);
+			mTextClock1.setTimeZone(item.mTimezone);
+			mTimeZone1.setText(item.getCityNameByLocale(true));
+		}
+		
+		if(timeZoneId2 >= 0) {
+			CityTimezoneItem item =  CityZoneHelper.getInstance(this).getCityTimezoneItemById(timeZoneId2);
+			mTextClock2.setTimeZone(item.mTimezone);
+			mTimeZone2.setText(item.getCityNameByLocale(true));
+
+		}
 	}
 	
 	private OnClickListener mItemClickListener = new OnClickListener() {
